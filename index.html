@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bintang Cahaya Wijaya | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+  --bg-light: #f8f1e5;
+  --bg-dark: #0f1c1e;
+  --text-light: #3e2f1c;
+  --text-dark: #e0dede;
+  --accent: #4a5a48;
+  --accent-light: #c2b49a;
+  --button-bg: #2d3a2d;
+  --button-text: #f5f5f5;
+}
+
+    body {
+      background: var(--bg-light);
+      color: var(--text-light);
+      font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+  background: #0f1c1e;
+  color: #e0dede;
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+}
+
+    header {
+  background: var(--accent);
+  color: white;
+  transition: background 0.3s;
+  border-bottom: 4px solid #d4af37;
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+}
+
+    nav ul li a {
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffeb3b;
+    }
+
+    .skill-list span {
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+      margin: 5px;
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .skill-list span:hover {
+      transform: scale(1.05);
+      background: #c7a27c;
+    }
+
+    .project-card {
+      background: #f0e4d7;
+      border-left: 5px solid var(--accent);
+      padding: 1em;
+      border-radius: 8px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    form input,
+    form textarea {
+      transition: border 0.3s, background 0.3s;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: var(--accent);
+      background: #e6d3c3;
+    }
+
+    form button {
+      background: var(--button-bg);
+      color: var(--button-text);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-family: 'Special Elite', serif;
+    }
+
+    form button:hover {
+      background: #4b2d1f;
+    }
+
+    #scrollTopBtn {
+      background: var(--accent);
+      color: white;
+      transition: background 0.3s;
+    }
+
+    #scrollTopBtn:hover {
+      background: #6d4229;
+    }
+
+    footer {
+      background: var(--accent);
+      color: white;
+      padding: 1em;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    #typed-name {
+  color: #6b3f27;
+  font-size: 2.5rem;
+  transition: color 0.3s;
+  font-family: 'Cormorant Garamond', serif;
+  text-shadow: 1px 1px 3px rgba(212, 175, 55, 0.4);
+}
+    @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <button id="toggle-dark">🌙 Toggle Dark Mode</button>
+    <div class="hero">
+            <h1 id="typed-name"></h1>
+      <p>Data & Design Enthusiast | SQL • Figma • RapidMiner • C • Python • HTML • CSS • Java</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <img src="assets/images/profile.jpg" alt="Bintang Cahaya Wijaya" class="round-image" />
+        <div class="about-text">
+          <p>Hi! I'm Bintang Cahaya Wijaya. I am a computer science major who is currently studying in Bina Nusantara University. I'm passionate about building smart, user-friendly solutions through data and design. My skillset includes SQL, Figma, RapidMiner, C, Python, HTML, CSS, and Java. I enjoy turning ideas into practical tools and insights using both technical and visual creativity.</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="education" data-aos="fade-up">
+      <h2>Education</h2>
+      <p><strong>Bina Nusantara University</strong><br>
+      Bachelor of Computer Science<br>
+      Expected Graduation: —</p>
+    </section>
+
+    <section id="skills" data-aos="fade-up">
+      <h2>Skills</h2>
+      <div class="skill-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+        <div>
+          <h3>Programming Languages</h3>
+          <span>C</span>
+          <span>Python</span>
+          <span>Java</span>
+        </div>
+        <div>
+          <h3>Web Development</h3>
+          <span>HTML</span>
+          <span>CSS</span>
+        </div>
+        <div>
+          <h3>Tools & Design</h3>
+          <span>SQL</span>
+          <span>Figma</span>
+          <span>RapidMiner</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" data-aos="fade-up">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Website Project</h3>
+          <p>Built a clean personal portfolio website using HTML & CSS to showcase my profile and work.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>RapidMiner Project</h3>
+          <p>Used RapidMiner to analyze datasets and build a predictive model for a business use case.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" data-aos="fade-up">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Google Data Analytics - Coursera</li>
+        <li>Figma UI/UX Basics - Dicoding</li>
+        <li>RapidMiner for Business Analytics</li>
+      </ul>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact Me</h2>
+      <p>Feel free to reach me directly at: <span style="font-family: sans-serif; font-weight: normal;">085210945834</span>.</p>
+      <p>Email: <a href="mailto:bintangcahayaw123@gmail.com">bintangcahayaw123@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/bintang-wijaya-7a0244330/" target="_blank">linkedin.com/in/bintang-wijaya-7a0244330</a></p>
+      <form action="https://formspree.io/f/movlqgry" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bintang Cahaya Wijaya. All rights reserved.</p>
+    <p>
+      <a href="mailto:bintangcahayaw123@gmail.com">Email</a> |
+      <a href="https://www.linkedin.com/in/bintang-wijaya-7a0244330/" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+
+  <button id="scrollTopBtn" title="Go to top">↑</button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    AOS.init();
+
+    // Typing effect
+    const title = document.getElementById('typed-name');
+    const text = "Hello, I'm Bintang Cahaya Wijaya";
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        title.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 60);
+      }
+    }
+    title.textContent = '';
+    type();
+
+    // Dark mode toggle
+    const toggleButton = document.getElementById('toggle-dark');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
